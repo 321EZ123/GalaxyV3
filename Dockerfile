@@ -1,14 +1,14 @@
-# Use an official Node.js runtime as a parent image
-FROM node:18
+# Use a lighter Node.js image
+FROM node:18-alpine
 
 # Set the working directory in the container
 WORKDIR /app
 
 # Clone the repository
-RUN git clone https://github.com/r480github/GalaxyV3.git .
-
-# Install the dependencies
-RUN npm install
+RUN apk add --no-cache git && \
+    git clone https://github.com/r480github/GalaxyV3.git . && \
+    npm install && \
+    npm run build
 
 # Expose the default port
 EXPOSE 8000
