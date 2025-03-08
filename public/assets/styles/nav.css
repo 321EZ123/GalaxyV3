@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 .navbar {
   z-index: 1000000;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Space Grotesk", serif;
+  font-weight: 500;
   position: fixed;
   left: -2rem;
   border-radius: 10px;
@@ -20,9 +20,8 @@
 }
 .navbar__link span {
   position: absolute;
-  left: 100%;
+  left: 80%;
   transform: translate(-3rem);
-  margin-left: 1rem;
   opacity: 0;
   pointer-events: none;
   background: -webkit-linear-gradient(white, #4a4e69);
